@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport"  initial-scale="1.0">
     <title>Prabesh Ghatani</title>
     <section>
     <!-- font -->
@@ -15,7 +15,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Russo+One&display=swap" rel="stylesheet">
     </section>
+    
 <link rel="stylesheet" href="default.css">
+<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
 <body>
   <section class="s1">
@@ -46,11 +48,11 @@
               <div class="left-column">
              <img  id="profile" src="images\prabesh.jpg" alt="">
                <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
-                  <div class="theme-option">
-                        <div id="light-mode"  class="theme"></div>
-                        <div id="blue-mode"  class="theme"></div>
-                        <div id="green-mode"  class="theme"></div>
-                        <div id="purple-mode" class="theme"></div>
+                  <div class="theme-options-wrapper">
+                        <div data-mode="light" id="light-mode"  class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode"  class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode"  class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                   </div>
 
                   <p id="note"> *COSTOMIZE YOUR THEME* </p>
@@ -58,11 +60,16 @@
                   </div>
 
               <div class="right-column">
-
+                <div class="shadow">
                     <div id="preview">
-                      <h3>WHAT I DO</h3>
-                      <p>I am a fresher and a enthusiastic Web developer.</p>
-                    </div>
+                        <div id="corner-tl"class="corner"></div>
+                        <div id="corner-tr"class="corner"></div>
+                          <h3>WHAT I DO</h3>
+                          <p>I am a fresher and a enthusiastic Web developer.</p>
+                        <div id="corner-bl"class="corner"></div>
+                        <div id="corner-br"class="corner"></div>
+                      </div>
+                  </div>
               </div>
         </div>
      </div>
@@ -72,7 +79,47 @@
 
   <section class="s2">
     <div class="main-container">
-       <h1> About </h1>
+
+       <div class="about-wrapper">
+            <div class="about-me">
+              <h4>More About Me</h4>
+
+              <p>Lorem ipsum dolor sit.</p>
+
+              <p>Lorem ipsum dolor sit.</p>
+            
+             <hr>
+
+              <h4>TOP EXPERTISE</h4>
+              <p>Fullstack developer with primary focus on Django.</p>
+              <a href="Prabesh-Ghatani-FlowCV-Resume-20240417.pdf" target="_blank">Download Resume</a>
+
+              <div id="skills">
+                    <ul>
+                      <li>Python</li>
+                      <li>Django</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ul>
+
+                    <ul>
+                      <li>Java</li>
+                      <li>Canva</li>
+                      <li>Flimmora </li>
+                      <li>Github</li>
+                  </ul>
+              </div>
+            </div>
+           
+          <div class="social-links">
+              <img id="social-image" src="images/pf1.jpg" alt="">
+              <h3>Find me on linkedin and Github</h3>
+
+              <a href="https://www.linkedin.com/in/prabesh-ghatani-62392729a/" target="_blank">Linkedin:Prabesh Ghatani</a> <br>
+              <a href="https://github.com/prabesh0000" target="_blank">Github: prabesh0000</a>
+              
+          </div>
+      </div>
     </div>
   </section>
 
@@ -80,18 +127,71 @@
   
   <section class="s1">
     <div class="main-container">
-       <h1>Portfolio</h1> 
+      <h3 style="text-align: center;">Some of my past projects</h3>
+         <div class="post-wrapper">
+          <div>
+               <div class="post">
+                   <img class="thumbnail" src="images/pf2.jpg" alt="">
+                   <div class="post-preview">
+                    <h6 class="post-title">POST TITLE</h6>
+                    <p class="post-intro"> This is a sentence </p>
+                    <a href="post.html">Read More</a>
+                   </div>
+              </div>
+            </div>
+            <div>
+              <div class="post">
+                    <img class="thumbnail" src="images/pf2.jpg" alt="">
+                    <div class="post-preview">
+                    <h6 class="post-title">POST TITLE</h6>
+                    <p class="post-intro"> This is a sentence </p>
+                    <a href="post.html">Read More</a>
+                    </div>
+              </div>
+            </div> 
+            <div>
+              <div class="post">
+                  <img class="thumbnail" src="images/pf2.jpg" alt="">
+                  <div class="post-preview">
+                  <h6 class="post-title">POST TITLE</h6>
+                  <p class="post-intro"> This is a sentence </p>
+                  <a href="post.html">Read More</a>
+                  </div>
+              </div>
+            </div>
+        
+        </div>
     </div>
   </section>
 
 
   <section class="s2">
     <div class="main-container">
-        <h1>Contact</h1>
+      <a href=""></a>
+      <h3 style="text-align: center;">Get in Touch</h3>
+
+      <form id="contact-form">
+        <a href="" name="contact"></a>
+         
+        
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+          <input type="submit" value="send" id="submit-btn">
+      </form>
     </div>
   </section>
 
-
+  <script type="text/javascript" src="script.js"></script>
+</body>
 
 </body>
 </html>
