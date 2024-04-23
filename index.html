@@ -175,22 +175,28 @@
          
         
 				<label>Name</label>
-				<input class="input-field" type="text" name="name">
+				<input class="input-field" id="fullname" type="text" name="name">
 
 				<label>Subject</label>
 				<input class="input-field" type="text" name="subject">
 
 				<label>Email</label>
-				<input class="input-field" type="text" name="email">
+				<input class="input-field" id="email_id"type="email" name="email">
 
 				<label>Message</label>
-				<textarea class="input-field" name="message"></textarea>
-          <input type="submit" value="send" id="submit-btn">
+				<textarea class="input-field" id="message" name="message"></textarea>
+          <input onclick="SendMail()" type="submit" value="send" id="submit-btn">
       </form>
     </div>
   </section>
 
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('EloisLpOdHpAL20lc')
+</script>
 </body>
 
 </body>

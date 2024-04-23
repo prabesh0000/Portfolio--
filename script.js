@@ -38,3 +38,15 @@ function setTheme(mode){
 
 	localStorage.setItem('theme', mode)
 }
+
+
+function SendMail(){
+	var params={
+		from_name : document.getElementById("fullname").value,
+		email_id : document.getElementById("email_id").value,
+		message : document.getElementById("message").value,
+	}
+	emailjs.send("service_56992fe","template_b28zlok",params).then(function(res){
+		alert("Sucessful"+res.status);
+	})
+}
